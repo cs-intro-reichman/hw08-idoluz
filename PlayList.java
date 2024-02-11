@@ -179,6 +179,7 @@ class PlayList {
     /** Returns the title of the shortest track in this list. 
      *  If the list is empty, returns null. */
     public String titleOfShortestTrack() {
+
         return tracks[minIndex(0)].getTitle();
     }
 
@@ -190,7 +191,7 @@ class PlayList {
         // Uses the selection sort algorithm,  
         // calling the minIndex method in each iteration.
         for (int i = 0; i < size; i++) {
-            int minIndex = this.minIndex(i);
+            int minIndex = minIndex(i);
             if (minIndex > i) {
            Track temp = tracks[i];
            tracks[i] = tracks[minIndex];
